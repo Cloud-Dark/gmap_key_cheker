@@ -33,7 +33,7 @@ const total = targets.length;
 
 targets.forEach(({ name, target, ext }) => {
     const outputName = `gmaps-api-checker-${target.split('-')[1]}${ext}`;
-    const cmd = `npx pkg server.js --targets ${target} --output dist/${outputName} --compress GZip`;
+    const cmd = `npx pkg . --targets ${target} --output dist/${outputName} --compress GZip --public`;
     
     console.log(`📦 Building ${name} executable...`);
     

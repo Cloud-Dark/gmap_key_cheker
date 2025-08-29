@@ -41,6 +41,12 @@
         </div>
     </div>
 
-    <script src="script-simple.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Auto-check backend status on page load
+        window.addEventListener('DOMContentLoaded', (event) => {
+            checkBackendStatus();
+        });
+    </script>
 </body>
 </html>
