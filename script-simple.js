@@ -270,7 +270,7 @@ function toggleResponseVisibility() {
 async function checkApis() {
     const apiKey = document.getElementById('apiKey').value;
     if (!apiKey) {
-        alert('Masukkan API Key terlebih dahulu');
+        alert('Please enter API Key first');
         return;
     }
 

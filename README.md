@@ -1,14 +1,14 @@
 # Google Maps API Key Checker
 
-Tool untuk mengecek status Google Maps API Key dengan dukungan proxy Node.js untuk server-side requests.
+A comprehensive tool to check the status of Google Maps API Keys with Node.js proxy support for server-side requests.
 
 ## Features
 
-- Test 21 different Google Maps APIs dengan satu API key
+- Test 21 different Google Maps APIs with a single API key
 - Real-time status updates (ON/OFF)
 - Simple and clean interface
-- **Node.js proxy server** untuk testing API yang membutuhkan server-side requests
-- Auto-detection backend server status
+- **Node.js proxy server** for testing APIs that require server-side requests
+- Auto-detection of backend server status
 
 ## Supported APIs
 
@@ -44,56 +44,56 @@ Tool untuk mengecek status Google Maps API Key dengan dukungan proxy Node.js unt
 ### Other
 - Maps URLs
 
-## Cara Menggunakan
+## How to Use
 
 ### 1. Install Dependencies
 ```bash
 npm install
 ```
 
-### 2. Jalankan Server Proxy (Opsional tapi Direkomendasikan)
+### 2. Run Proxy Server (Optional but Recommended)
 
-**Opsi A: Jalankan dari Source Code**
+**Option A: Run from Source Code**
 ```bash
 npm start
 ```
 
-**Opsi B: Build ke Executable**
+**Option B: Build to Executable**
 ```bash
 npm run build
 ```
-Executable akan tersedia di folder `dist/`
+Executables will be available in the `dist/` folder
 
-Server akan berjalan di `http://localhost:3000`
+Server will run on `http://localhost:3000`
 
-### 3. Buka Frontend
-- Jika server proxy aktif: Buka `http://localhost:3000`
-- Tanpa server proxy: Buka file `index.html` langsung di browser
+### 3. Open Frontend
+- If proxy server is active: Open `http://localhost:3000`
+- Without proxy server: Open `index.html` file directly in browser
 
-### 4. Cara Testing
+### 4. Testing Process
 
-1. **Masukkan Backend URL** (biasanya `http://localhost:3000`)
-2. **Klik "Check Backend"** untuk memastikan server proxy aktif
-3. **Masukkan Google Maps API Key**
-4. **Klik "Check APIs"**
+1. **Enter Backend URL** (usually `http://localhost:3000`)
+2. **Click "Check Backend"** to ensure proxy server is active
+3. **Enter Google Maps API Key**
+4. **Click "Check APIs"**
 
-## Status Indikator
+## Status Indicators
 
-- **🟢 (Hijau)**: Backend server aktif
-- **🔴 (Merah)**: Backend server offline
-- **ON**: API aktif dan berfungsi
-- **OFF**: API tidak aktif/bermasalah
+- **🟢 (Green)**: Backend server active
+- **🔴 (Red)**: Backend server offline
+- **ON**: API active and working
+- **OFF**: API inactive/problematic
 
 ## API Categories
 
-### ✅ APIs yang Dapat Ditest Tanpa Proxy (Browser):
+### ✅ APIs that Can Be Tested Without Proxy (Browser):
 - Maps JavaScript API
 - Static Maps API
 - Street View Static API
 - Maps Embed API
 - Maps URLs
 
-### ⚡ APIs yang Membutuhkan Proxy (Server-side):
+### ⚡ APIs that Require Proxy (Server-side):
 - Geocoding API
 - Reverse Geocoding API
 - Places API (Nearby Search, Text Search, Details, Photos, Autocomplete)
@@ -106,20 +106,20 @@ Server akan berjalan di `http://localhost:3000`
 
 ## Requirements
 
-- Modern web browser dengan JavaScript enabled
+- Modern web browser with JavaScript enabled
 - Valid Google Maps API key
-- Internet connection untuk API testing
-- **Node.js** (untuk server proxy)
+- Internet connection for API testing
+- **Node.js** (for server proxy)
 
-## Build ke Executable
+## Build to Executable
 
-Untuk membuat executable yang bisa dijalankan tanpa Node.js:
+To create an executable that can run without Node.js:
 
 ```bash
-# Install dependencies dulu
+# Install dependencies first
 npm install
 
-# Build semua platform (Windows, Linux, macOS)
+# Build all platforms (Windows, Linux, macOS)
 npm run build
 
 # Build specific platform
@@ -128,17 +128,17 @@ npm run build:linux   # Linux executable
 npm run build:mac     # macOS executable
 ```
 
-Hasil build akan tersimpan di folder `dist/`:
+Build results will be saved in the `dist/` folder:
 - `gmaps-api-checker-win.exe` (Windows)
 - `gmaps-api-checker-linux` (Linux)
 - `gmaps-api-checker-macos` (macOS)
 
-## Catatan Penting
+## Important Notes
 
-- Tanpa server proxy, beberapa API akan gagal karena CORS policy
-- Server proxy memungkinkan testing semua Google Maps APIs
-- API key harus format yang valid (dimulai dengan "AIza" dan minimal 30 karakter)
-- Executable tidak memerlukan Node.js untuk dijalankan
+- Without server proxy, some APIs will fail due to CORS policy
+- Server proxy enables testing of all Google Maps APIs
+- API key must be in valid format (starts with "AIza" and minimum 30 characters)
+- Executables do not require Node.js to run
 
 ## API Key Setup
 
