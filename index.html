@@ -11,13 +11,17 @@
         <h1>Google Maps API Checker</h1>
         
         <div class="input-section">
-            <div class="backend-config">
-                <input type="text" id="backendUrl" placeholder="Backend URL (default: http://localhost:3000)" value="http://localhost:3000" />
-                <button id="checkBackend" onclick="checkBackendStatus()">Check Backend</button>
-                <span id="backendStatus" class="status-indicator">●</span>
+            <div class="input-row">
+                <div class="backend-config">
+                    <input type="text" id="backendUrl" placeholder="Backend URL (default: http://localhost:3000)" value="http://localhost:3000" />
+                    <button id="checkBackend" onclick="checkBackendStatus()">Check Backend</button>
+                    <span id="backendStatus" class="status-indicator">●</span>
+                </div>
             </div>
-            <input type="text" id="apiKey" placeholder="Enter Google Maps API Key" />
-            <button onclick="checkApis()">Check APIs</button>
+            <div class="input-row">
+                <input type="text" id="apiKey" placeholder="Enter Google Maps API Key" />
+                <button onclick="checkApis()">Check APIs</button>
+            </div>
         </div>
         
         <div id="loading">

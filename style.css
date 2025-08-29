@@ -20,6 +20,17 @@ body {
     border-radius: 5px;
 }
 
+.input-row {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input-row:last-child {
+    margin-bottom: 0;
+}
+
 .backend-config {
     margin-bottom: 15px;
     padding: 15px;
