@@ -20,19 +20,28 @@ body {
     border-radius: 5px;
 }
 
-.input-row {
-    margin-bottom: 15px;
+.column-container {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-.input-row:last-child {
-    margin-bottom: 0;
+.column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.left-column {
+    /* Specific styles for left column if needed */
+}
+
+.right-column {
+    /* Specific styles for right column if needed */
 }
 
 .backend-config {
-    margin-bottom: 15px;
+    margin-bottom: 0; /* Remove margin-bottom if it causes extra space */
     padding: 15px;
     background: #e9ecef;
     border-radius: 4px;
