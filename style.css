@@ -74,6 +74,35 @@ input[type="text"] {
     margin-right: 10px;
 }
 
+.api-key-input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative; /* For positioning the button if needed */
+    margin-right: 10px; /* Space between input group and next button */
+}
+
+.api-key-input-wrapper input[type="password"],
+.api-key-input-wrapper input[type="text"] {
+    padding-right: 40px; /* Make space for the toggle button */
+}
+
+#toggleApiKeyVisibility {
+    position: absolute;
+    right: 5px;
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px;
+    min-width: unset; /* Override checkBackend button style */
+}
+
+#toggleApiKeyVisibility:hover {
+    color: #333;
+    background: none;
+}
+
 button {
     padding: 10px 20px;
     background: #4285f4;

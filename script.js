@@ -162,6 +162,24 @@ async function checkBackendStatus() {
     }
 }
 
+// Toggle API Key Visibility
+document.addEventListener('DOMContentLoaded', () => {
+    const apiKeyInput = document.getElementById('apiKey');
+    const toggleButton = document.getElementById('toggleApiKeyVisibility');
+
+    if (apiKeyInput && toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            if (apiKeyInput.type === 'password') {
+                apiKeyInput.type = 'text';
+                toggleButton.textContent = 'Hide';
+            } else {
+                apiKeyInput.type = 'password';
+                toggleButton.textContent = 'Show';
+            }
+        });
+    }
+});
+
 async function checkApis() {
     const apiKey = document.getElementById('apiKey').value;
     if (!apiKey) {
