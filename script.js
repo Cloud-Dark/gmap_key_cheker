@@ -215,11 +215,28 @@ async function proxyRequest(url, method = 'GET', body = null) {
         if (response.ok && data.status && data.status >= 200 && data.status < 300) {
             return { success: true, data: data.data };
         } else {
-            return { success: false, data: data.error || data.data || 'Unknown error from proxy' };
+            // Return full error information including raw response
+            return { 
+                success: false, 
+                data: {
+                    error: data.error || `HTTP ${data.status}: ${data.statusText || 'Unknown error'}`,
+                    status_code: data.status,
+                    status_text: data.statusText,
+                    raw_response: data.data,
+                    full_response: data
+                }
+            };
         }
     } catch (error) {
         console.error('Proxy request failed:', error);
-        return { success: false, data: { error: `Proxy request failed: ${error.message}` } };
+        return { 
+            success: false, 
+            data: { 
+                error: `Network/Proxy Error: ${error.message}`,
+                error_type: 'network_error',
+                original_error: error.toString()
+            } 
+        };
     }
 }
 
